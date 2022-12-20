@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Manager</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3fd0dd7fb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i style="color:white" class="fa-brands fa-apple"></i></span>
+                        <span class="title"><h2 style="color:white">Brand Name</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="title"><h2>Customers</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-message"></i></span>
+                        <span class="title"><h2>Message</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-question"></i></span>
+                        <span class="title"><h2>Help</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="title"><h2>Settings</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-key"></i></i></span>
+                        <span class="title"><h2>Password</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="title"><h2>Sign Out</h2></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"><i class="fa-solid fa-bars"></i></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="img/002.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                    <div class="cardName">Daily Views</div>
+                    </div>
+                    
+                    <div class="iconBox">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+               
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+                    
+                    <div class="iconBox">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">208</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+                    
+                    <div class="iconBox">
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">6,021</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+                    
+                    <div class="iconBox">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="carHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Star</td>
+                                <td>$20</td>
+                                <td>Paid</td>
+                                <td>Devivered</td>
+                            </tr>
+                            <tr>
+                                <td>Window</td>
+                                <td>$10</td>
+                                <td>Due</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>Spekers</td>
+                                <td>$50</td>
+                                <td>Paid</td>
+                                <td>Return</td>
+                            </tr>
+                            <tr>
+                                <td>Foods</td>
+                                <td>$100</td>
+                                <td>Due</td>
+                                <td>Laudry</td>
+                            </tr>
+                            <tr>
+                                <td>Travel</td>
+                                <td>$1000</td>
+                                <td>Paid</td>
+                                <td>Conditional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recentCustomers">
+                    <div class="carHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+
+                    <div id="ctms">
+                        <div class="Customers">
+                            <div class="imgBx"><img src="img/001.jpg" alt=""></div>
+                            <div class="name"><h4>David<br><span>Italia</span></h4></div>
+                        </div>
+                       
+                        <div class="Customers">
+                            <div class="imgBx"><img src="img/003.jpg" alt=""></div>
+                            <div class="name"><h4>David<br><span>Italia</span></h4></div>
+                        </div>
+                                                
+                        <div class="Customers">
+                            <div class="imgBx"><img src="img/004.jpg" alt=""></div>
+                            <div class="name"><h4>David<br><span>Italia</span></h4></div>
+                        </div>
+                        
+                        <div class="Customers">
+                            <div class="imgBx"><img src="img/011.jpg" alt=""></div>
+                            <div class="name"><h4>David<br><span>Italia</span></h4></div>
+                        </div>
+                        
+                        <div class="Customers">
+                            <div class="imgBx"><img src="img/012.jpg" alt=""></div>
+                            <div class="name"><h4>David<br><span>Italia</span></h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

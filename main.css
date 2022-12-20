@@ -1,0 +1,361 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width:100%;
+}
+
+.navigation{
+    position: fixed;
+    width:250px;
+    height:100%;
+    background: #ddd;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width:250px;
+}
+
+
+.navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width:100%;
+    list-style: none;
+}
+
+.navigation ul li a:hover{
+    background: rgb(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 10px;
+    background-color:  rgb(44, 43, 43);
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width:100%;
+    display:flex;
+    text-decoration: none;
+    color:black;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display:block;
+    min-width:60px;
+    height:70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height:70px;
+    line-height: 70px;
+    font-size: 15px;
+}
+
+/* main */
+
+.main{
+    position: absolute;
+    width:calc(100% - 250px);
+    left: 250px;
+    min-height:100vh;
+    transition: 0.5s;
+    background: #ddd;
+}
+.main.active{
+    width:100%;
+    left:60px;
+    padding-right: 60px;
+}
+
+.main .topbar{
+    width:100%;
+    height:70px;
+    padding: 0 10px;
+    background: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    position: relative;
+    width:70px;
+    height:70px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+}
+
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height:40px;
+    border-radius: 40px;
+    padding: 5px 35px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.search label input:hover{
+    border: 1px solid rgb(144, 200, 247);
+}
+.search label i{
+    position: absolute;
+    left:15px;
+    top:3px;
+}
+
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBox{
+    position: relative;
+    width:100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cardBox .card:hover{
+    background: rgb(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.cardBox .card .cardName{
+    color:#999;
+}
+.cardBox .card .iconBox {
+    font-size: 2em; 
+}
+
+.details{
+    position: relative;
+    width:100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.details .recentOrders{
+    position: relative;
+    min-height: 400px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.details .recentOrders .carHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.details .recentOrders .carHeader h2{
+    font-weight: 600;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background:  rgb(44, 43, 43);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: rgb(99, 99, 99);
+}
+
+.details .recentOrders table{
+    margin-top: 30px;
+    width:100%;
+    height:300px;
+    border-collapse: collapse;
+}
+
+.details .recentOrders table tr{
+    border-bottom:1px solid rgb(0, 0, 0, 0.3);
+}
+
+.details .recentOrders table thead td{
+    font-weight: 600;
+}
+
+.details .recentOrders table tbody tr:hover{
+    background: rgb(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.details .recentOrders table tbody tr:last-child{
+    border:none;
+}
+
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child{
+    text-align:right;
+}
+.details .recentOrders table thead tr td:nth-child(2),
+.details .recentOrders table tbody tr td:nth-child(2){
+    text-align: right;
+    padding-right: 20px;
+}
+
+.details .recentCustomers{
+    position: relative;
+    min-height: 400px;
+    padding: 20px;
+    background: #fff;
+    border-left: 2px solid #ddd;
+}
+
+.details .recentCustomers .carHeader{
+    text-align: center;
+}
+
+.details .recentCustomers .Customers{
+    position: relative;
+    margin-top: 20px;
+    display:flex;
+}
+
+.details .recentCustomers .Customers:hover{
+    background: rgb(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.details .recentCustomers .imgBx{
+    position: relative;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.details .recentCustomers .imgBx img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.details .recentCustomers .name{
+   padding-left: 1rem;
+}
+
+.details .recentCustomers .name span{
+    font-weight: 500;
+    color:#999;
+}
+
+
+
+@media(max-width:62rem)
+{
+    .details{
+        display: block;
+    }
+
+    .navigation{
+        left:-250px;
+    }
+    .navigation.active{
+        left:0;
+    }
+    .main{
+        width:100%;
+        left:0;
+    }
+    .main.active{
+        width:calc(100%-250px);
+        left:250px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #ctms{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .details .recentCustomers{
+        min-height: 300px;
+    }
+    
+}
+
+@media(max-width:768px)
+{
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
